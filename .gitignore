@@ -138,12 +138,18 @@ wandb/
 tensorboard_logs/
 
 # Configuration files with sensitive data
+config.yaml
 config_dev.yaml
 config_private.yaml
 *.key
 *.pem
 api_keys.txt
 secrets.yaml
+
+# Keep templates but ignore actual config files
+!config.template.yaml
+!config/*.template
+!config/*.example
 
 # IDE specific
 .vscode/settings.json
@@ -176,14 +182,11 @@ tmp/
 logs/
 log/
 
-# UFO specific
-trajectories/
-recordings/
-screenshots/
-*.json.backup
-experience_data/
-
-# UFO Framework (separate repository)
-# Note: UFO is a separate Git repository from Microsoft
-# Clone it separately: git clone https://github.com/microsoft/UFO.git
-UFO/
+# UFO specific (but include UFO folder itself)
+UFO/trajectories/
+UFO/recordings/
+UFO/screenshots/
+UFO/*.json.backup
+UFO/experience_data/
+UFO/config/config.yaml
+UFO/config/config_dev.yaml

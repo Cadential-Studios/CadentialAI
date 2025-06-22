@@ -1,0 +1,40 @@
+# API Configuration Template for CadentialAI
+# Copy this file to 'config.yaml' and add your actual API keys
+# The config.yaml file will be ignored by Git for security
+
+# OpenAI Configuration
+OPENAI:
+  API_KEY: "your-openai-api-key-here"
+  API_BASE: "https://api.openai.com/v1"
+  API_MODEL: "gpt-4o"
+  TEMPERATURE: 0.1
+  MAX_TOKENS: 4096
+
+# Azure OpenAI Configuration (alternative)
+AZURE_OPENAI:
+  API_KEY: "your-azure-openai-api-key-here"
+  API_BASE: "https://your-resource-name.openai.azure.com/"
+  API_VERSION: "2024-02-15-preview"
+  DEPLOYMENT_NAME: "gpt-4o"
+  TEMPERATURE: 0.1
+  MAX_TOKENS: 4096
+
+# Speech Services (optional)
+AZURE_SPEECH:
+  API_KEY: "your-azure-speech-key-here"
+  REGION: "your-region-here"
+
+# Other API Services (add as needed)
+GOOGLE:
+  API_KEY: "your-google-api-key-here"
+
+ANTHROPIC:
+  API_KEY: "your-anthropic-api-key-here"
+
+# CadentialAI Personal Settings
+CADENTIAL_AI:
+  USER_NAME: "Your Name"
+  TIMEZONE: "UTC"
+  VOICE_ENABLED: true
+  DEBUG_MODE: false
+  LOG_LEVEL: "INFO"
