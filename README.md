@@ -67,16 +67,24 @@ Built on UFO²'s proven foundation of Windows UIA, Win32, and WinCOM integration
 
 ### ⚙️ Installation
 ```powershell
-# Navigate to the project directory
-cd "c:\Users\scott\OneDrive\Desktop\Coding\AI Tools\UFO"
+# Clone the CadentialAI repository
+git clone https://github.com/yourusername/CadentialAI.git
+cd CadentialAI
+
+# Clone the UFO² framework
+git clone https://github.com/microsoft/UFO.git
 
 # Create virtual environment
 python -m venv .venv
 .venv\Scripts\activate
 
+# Install all dependencies
+pip install -r requirements.txt
+
 # Install UFO dependencies
 cd UFO
 pip install -r requirements.txt
+cd ..
 ```
 
 ### 🔧 Configuration
