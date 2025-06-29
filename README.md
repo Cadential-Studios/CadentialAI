@@ -15,18 +15,15 @@
 
 </div>
 
-
-
 ---
 
-## 🎯 Project Vision
+## Project Vision
 
-**CadentialAI** is a personal Windows AI assistant project, built on top of Microsoft's UFO² framework. It serves as an intelligent companion that understands natural language commands and automates complex desktop workflows across multiple applications. The goal is to create a truly personalized AI assistant that learns from usage patterns and becomes increasingly helpful over time.
 **CadentialAI** is a personal Windows AI assistant project, built on top of Microsoft's UFO² framework. It serves as an intelligent companion that understands natural language commands and automates complex desktop workflows across multiple applications. The goal is to create a truly personalized AI assistant that learns from usage patterns and becomes increasingly helpful over time.
 
 ---
 
-## ✨ Core Capabilities
+## Core Capabilities
 <div align="center">
 
 | **Smart Desktop Automation** | **Contextual Learning** | **Multi-Application Workflows** |
@@ -41,7 +38,7 @@
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 CadentialAI is built as a layer on top of UFO²'s **Desktop AgentOS**, incorporating:
 
@@ -56,15 +53,15 @@ Built on UFO²'s proven foundation of Windows UIA, Win32, and WinCOM integration
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 🛠️ Prerequisites
+### Prerequisites
 - **Python >= 3.10** 
 - **Windows OS >= 10**
 - **UFO² Framework** (included)
 - **OpenAI API Key** (for GPT-4 integration)
 
-### ⚙️ Installation
+### Installation
 ```powershell
 # Clone the CadentialAI repository (includes UFO framework)
 git clone https://github.com/Cadential-Studios/CadentialAI.git
@@ -84,7 +81,7 @@ pip install -r UFO\requirements.txt
 .\setup.ps1 -SetupConfig
 ```
 
-### 🔐 API Configuration
+### API Configuration
 ```powershell
 # Edit your API keys in the config file (this file is not tracked by Git)
 notepad config.yaml
@@ -95,8 +92,7 @@ notepad UFO\config\config.yaml
 
 **Important**: The `config.yaml` file contains your API keys and is automatically excluded from Git commits for security.
 
->>>>>>> a993459c5eddb85eb9b2f913a285b4216d5c77ca
-### 🔧 Configuration
+### Configuration
 1. Copy the configuration template:
 ```powershell
 copy UFO\ufo\config\config.yaml.template UFO\ufo\config\config.yaml
@@ -115,12 +111,8 @@ APP_AGENT:
   API_MODEL: "gpt-4o"
 ```
 
-### 🎉 Launch CadentialAI
+### Launch CadentialAI
 ```powershell
-# Start CadentialAI (it will automatically load UFO framework)
-python cadential_ai.py
-
-# Or run UFO directly
 # Start CadentialAI (it will automatically load UFO framework)
 python cadential_ai.py
 
@@ -131,7 +123,7 @@ python -m ufo --task "personal_assistant"
 
 ---
 
-## 🎯 Current Features
+## Current Features
 
 - **Desktop Automation**: Full UFO² integration for Windows application control
 - **Natural Language Processing**: Understands conversational commands
@@ -142,7 +134,7 @@ python -m ufo --task "personal_assistant"
 
 ---
 
-## 📈 Future Plans
+## Future Plans
 
 ### Phase 1: Enhanced Personalization (Q2 2024)
 - [ ] **Advanced Voice Integration**
@@ -248,7 +240,7 @@ python -m ufo --task "personal_assistant"
 
 ---
 
-## 🔧 Technical Stack
+## Technical Stack
 
 - **Core Framework**: Microsoft UFO² (Desktop AgentOS)
 - **AI/ML**: OpenAI GPT-4o, planned local LLM integration
@@ -260,7 +252,7 @@ python -m ufo --task "personal_assistant"
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CadentialAI/
@@ -277,7 +269,7 @@ CadentialAI/
 
 ---
 
-## 📝 Development Philosophy
+## Development Philosophy
 
 CadentialAI is designed with these principles:
 - **Privacy First**: Personal data stays local when possible, full user control
@@ -289,7 +281,7 @@ CadentialAI is designed with these principles:
 
 ---
 
-## 🎵 Special Features
+## Special Features
 
 ### FL Studio Integration
 CadentialAI includes specialized modules for music production:
@@ -306,7 +298,7 @@ CadentialAI includes specialized modules for music production:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Cadential Studios welcomes:
 - Feature suggestions and ideas for improvement
@@ -317,7 +309,7 @@ Cadential Studios welcomes:
 
 ---
 
-## 📄 License & Attribution
+## License & Attribution
 
 This project is released under the [MIT License](LICENSE).
 
@@ -329,7 +321,7 @@ Special thanks to the UFO² team for creating such a powerful foundation for Win
 
 ---
 
-## 📞 Contact
+## Contact
 
 For questions, suggestions, or collaboration:
 - **Project**: CadentialAI - Personal Windows AI Assistant
