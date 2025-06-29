@@ -24,7 +24,7 @@ def test_main_ufo_config():
 
         if config.config_data is None:
             print("⚠️  Config data is None (RUN_CONFIGS=false)")
-            return
+            assert config.config_data is not None, "Config data is None (RUN_CONFIGS=false)"
 
         # Check if we have basic config structure
         agents = ["HOST_AGENT", "APP_AGENT", "BACKUP_AGENT"]
