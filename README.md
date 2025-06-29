@@ -23,7 +23,7 @@
 
 ## 🎯 Project Vision
 
-**CadentialAI** is my personal Windows AI assistant project, built on top of Microsoft's UFO² framework. It serves as an intelligent companion that understands natural language commands and automates complex desktop workflows across multiple applications. The goal is to create a truly personalized AI assistant that learns from my usage patterns and becomes increasingly helpful over time.
+**CadentialAI** is a personal Windows AI assistant project, built on top of Microsoft's UFO² framework. It serves as an intelligent companion that understands natural language commands and automates complex desktop workflows across multiple applications. The goal is to create a truly personalized AI assistant that learns from usage patterns and becomes increasingly helpful over time.
 
 ---
 
@@ -67,12 +67,9 @@ Built on UFO²'s proven foundation of Windows UIA, Win32, and WinCOM integration
 
 ### ⚙️ Installation
 ```powershell
-# Clone the CadentialAI repository
-git clone https://github.com/yourusername/CadentialAI.git
+# Clone the CadentialAI repository (includes UFO framework)
+git clone https://github.com/Cadential-Studios/CadentialAI.git
 cd CadentialAI
-
-# Clone the UFO² framework
-git clone https://github.com/microsoft/UFO.git
 
 # Create virtual environment
 python -m venv .venv
@@ -82,11 +79,24 @@ python -m venv .venv
 pip install -r requirements.txt
 
 # Install UFO dependencies
-cd UFO
-pip install -r requirements.txt
-cd ..
+pip install -r UFO\requirements.txt
+
+# Setup configuration files
+.\setup.ps1 -SetupConfig
 ```
 
+### 🔐 API Configuration
+```powershell
+# Edit your API keys in the config file (this file is not tracked by Git)
+notepad config.yaml
+
+# Also configure UFO settings
+notepad UFO\config\config.yaml
+```
+
+**Important**: The `config.yaml` file contains your API keys and is automatically excluded from Git commits for security.
+
+>>>>>>> a993459c5eddb85eb9b2f913a285b4216d5c77ca
 ### 🔧 Configuration
 1. Copy the configuration template:
 ```powershell
@@ -108,6 +118,10 @@ APP_AGENT:
 
 ### 🎉 Launch CadentialAI
 ```powershell
+# Start CadentialAI (it will automatically load UFO framework)
+python cadential_ai.py
+
+# Or run UFO directly
 cd UFO
 python -m ufo --task "personal_assistant"
 ```
