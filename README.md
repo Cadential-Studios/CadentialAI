@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <h1 align="center">
-  <img src="data/cadentialai/images/cadentialAI_logo_transparent.png" width="60%"/> 
+  <img src="data\cadentialai\images\light\cadentialAI_logo_transparent_light.png" width="60%"/> 
 </h1>
 <p align="center">
   <em>An intelligent personal assistant for Windows, powered by UFO² framework for seamless desktop automation and productivity enhancement.</em>
