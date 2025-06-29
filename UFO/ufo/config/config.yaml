@@ -3,9 +3,9 @@ HOST_AGENT: {
   REASONING_MODEL: False, # Whether the model is reasoning model. For OpenAI o1, o3, o4-mini, this field must be set to True.
   API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
   API_BASE: "https://api.openai.com/v1/chat/completions", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
-  API_KEY: "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",  # The OpenAI API key, begin with sk-
-  API_VERSION: "2025-04-14", # "2024-02-15-preview" by default
-  API_MODEL: "gpt-4.1-nano",  # The only OpenAI model by now that accepts visual input
+  API_KEY: "sk-",  # The OpenAI API key, begin with sk-
+  API_VERSION: "2025-02-01-preview", # "2024-02-15-preview" by default
+  API_MODEL: "gpt-4o",  # The only OpenAI model by now that accepts visual input
 
 
   ### Comment above and uncomment these if using "aoai".
@@ -27,9 +27,9 @@ APP_AGENT: {
   REASONING_MODEL: False, # Whether the model is reasoning model. For OpenAI o1, o3, o4-mini, this field must be set to True.
   API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
   API_BASE: "https://api.openai.com/v1/chat/completions", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
-  API_KEY: "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",  # The OpenAI API key, begin with sk-
-  API_VERSION: "2025-04-14", # "2024-02-15-preview" by default
-  API_MODEL: "gpt-4.1-nano",  # The only OpenAI model by now that accepts visual input
+  API_KEY: "sk-",  # The OpenAI API key, begin with sk-
+  API_VERSION: "2025-02-01-preview", # "2024-02-15-preview" by default
+  API_MODEL: "gpt-4o",  # The only OpenAI model by now that accepts visual input
 
 
   ### Comment above and uncomment these if using "aoai".
@@ -52,9 +52,9 @@ EVALUATION_AGENT: {
   REASONING_MODEL: False, # Whether the model is reasoning model. For OpenAI o1, o3, o4-mini, this field must be set to True.
   API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
   API_BASE: "https://api.openai.com/v1/chat/completions", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
-  API_KEY: "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",  # The OpenAI API key, begin with sk-
+  API_KEY: "sk-",  # The OpenAI API key, begin with sk-
   API_VERSION: "2025-02-01-preview", # "2024-02-15-preview" by default
-  API_MODEL: "gpt-4.1-nano",  # The only OpenAI model by now that accepts visual input
+  API_MODEL: "gpt-4o",  # The only OpenAI model by now that accepts visual input
 
 
   ### Comment above and uncomment these if using "aoai".
@@ -76,8 +76,8 @@ BACKUP_AGENT: {
 
   API_TYPE: "openai" , # The API type, "openai" for the OpenAI API, "aoai" for the AOAI API, 'azure_ad' for the ad authority of the AOAI API.  
   API_BASE: "https://api.openai.com/v1/chat/completions", # The the OpenAI API endpoint, "https://api.openai.com/v1/chat/completions" for the OpenAI API.
-  API_KEY: "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",  # The OpenAI API key, begin with sk-
-  API_VERSION: "2025-04-14", # "2024-02-15-preview" by default
+  API_KEY: "sk-",  # The OpenAI API key, begin with sk-
+  API_VERSION: "2024-02-15-preview", # "2024-02-15-preview" by default
   API_MODEL: "gpt-4-vision-preview",  # The only OpenAI model by now that accepts visual input
 
 
@@ -97,7 +97,7 @@ BACKUP_AGENT: {
 
 ### For the omniparser grounding model
 OMNIPARSER: {
-  ENDPOINT: "http://localhost:5000", # The omniparser endpoint - updated for local deployment
+  ENDPOINT: "http://xxx.xxx.xxx.xxx:xxxx", # The omniparser endpoint, to be filled by the user
   BOX_THRESHOLD: 0.05, # The box threshold for the omniparser
   IOU_THRESHOLD: 0.1, # The iou threshold for the omniparser
   USE_PADDLEOCR: True, # Whether to use the paddleocr for the omniparser
@@ -129,7 +129,7 @@ RAG_EXPERIENCE: False  # Whether to use the RAG from its self-experience.
 RAG_EXPERIENCE_RETRIEVED_TOPK: 5  # The topk for the offline retrieved documents
 
 ## RAG Configuration for demonstration
-RAG_DEMONSTRATION: True  # Whether to use the RAG from its user demonstration.
+RAG_DEMONSTRATION: False  # Whether to use the RAG from its user demonstration.
 RAG_DEMONSTRATION_RETRIEVED_TOPK: 5  # The topk for the offline retrieved documents
 RAG_DEMONSTRATION_COMPLETION_N: 3  # The number of completion choices for the demonstration result
 

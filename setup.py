@@ -16,12 +16,12 @@ with open('requirements.txt') as f:
 setup(
     name="cadentialai",
     version="1.0.0",
-    author="CadentialAI Team",
-    author_email="your-email@example.com",  # Replace with your email
+    author="Cadential Studios",
+    author_email="cadentialstudios50@example.com",  # Replace with your email
     description="Personal Windows AI Assistant powered by UFO² framework",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/CadentialAI",  # Replace with your GitHub URL
+    url="https://github.com/Cadential-Studios/CadentialAI",  # Replace with your GitHub URL
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
@@ -63,8 +63,8 @@ setup(
     },
     keywords="ai assistant windows automation ufo desktop productivity",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/CadentialAI/issues",
-        "Source": "https://github.com/yourusername/CadentialAI",
-        "Documentation": "https://github.com/yourusername/CadentialAI/docs",
+        "Bug Reports": "https://github.com/Cadential-Studios/CadentialAI/issues",
+        "Source": "https://github.com/Cadential-Studios/CadentialAI",
+        "Documentation": "https://github.com/Cadential-Studios/CadentialAI/docs",
     },
 )
