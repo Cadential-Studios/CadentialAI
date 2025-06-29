@@ -69,7 +69,7 @@ def test_dataflow_config():
         dataflow_config_dir = Path("dataflow/config")
         if not dataflow_config_dir.exists():
             print("⚠️  Dataflow config directory not found")
-            return
+            assert False, "Dataflow config directory is missing. Test failed."
 
         # Try to load dataflow config
         sys.path.insert(0, str(Path("dataflow").absolute()))
