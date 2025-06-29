@@ -81,6 +81,11 @@ pip install -r UFO\requirements.txt
 .\setup.ps1 -SetupConfig
 ```
 
+> **Troubleshooting**: If you encounter `ModuleNotFoundError` errors for
+> `yaml`, `colorama`, `pywinauto`, or `win32api`, ensure all dependencies are
+> installed using the commands above. Note that `pywin32`/`win32api` only
+> installs on Windows systems.
+
 ### API Configuration
 ```powershell
 # Edit your API keys in the config file (this file is not tracked by Git)
@@ -112,6 +117,10 @@ APP_AGENT:
 ```
 
 ### Launch CadentialAI
+> **Note**: CadentialAI and the UFO framework rely on Windows-only
+> packages (`pywinauto`, `pywin32`). Launching the assistant on
+> non‑Windows systems will result in `ModuleNotFoundError` for
+> `win32api`.
 ```powershell
 # Start CadentialAI (it will automatically load UFO framework)
 python cadential_ai.py
