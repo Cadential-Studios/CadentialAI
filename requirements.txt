@@ -36,13 +36,10 @@ SpeechRecognition==3.10.0
 pyttsx3==2.90
 
 # GUI and system integration
-tkinter # Usually comes with Python
 plyer==2.1.0
 
 # Data processing and storage
-sqlite3 # Built-in with Python
 json5==0.9.14
-setuptools
 
 # Development dependencies
 pytest==7.4.4
