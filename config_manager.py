@@ -4,6 +4,7 @@ Handles secure loading of API keys and settings
 """
 
 import os
+import shutil
 import yaml
 from pathlib import Path
 from typing import Dict, Any, Optional
@@ -13,7 +14,7 @@ class ConfigManager:
     
     def __init__(self, config_path: Optional[str] = None):
         self.project_root = Path(__file__).parent
-        self.config_path = config_path or self.project_root / "config.yaml"
+        self.config_path = Path(config_path) if config_path else self.project_root / "config.yaml"
         self.template_path = self.project_root / "config.template.yaml"
         self._config = None
     
@@ -54,13 +55,17 @@ class ConfigManager:
             'AZURE_SPEECH_REGION': ['AZURE_SPEECH', 'REGION'],
         }
         
+        # Ensure self._config is initialized as a dictionary
+        if self._config is None:
+            self._config = {}
+
         for env_var, config_path in env_mappings.items():
             value = os.getenv(env_var)
             if value:
                 # Create nested structure if needed
                 current = self._config
                 for key in config_path[:-1]:
-                    if key not in current:
+                    if isinstance(current, dict) and key not in current:
                         current[key] = {}
                     current = current[key]
                 current[config_path[-1]] = value
@@ -109,3 +114,6 @@ def get_openai_key() -> str:
 def get_azure_openai_key() -> str:
     """Get Azure OpenAI API key."""
     return config_manager.get_azure_openai_config()['API_KEY']
+
+# Global instance for easy import
+config_manager = ConfigManager()

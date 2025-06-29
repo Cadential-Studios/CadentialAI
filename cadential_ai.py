@@ -10,7 +10,6 @@ from pathlib import Path
 # Add project root to Python path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
-sys.path.insert(0, str(project_root / "UFO"))
 
 def main():
     """Main entry point for CadentialAI."""
@@ -41,28 +40,35 @@ def main():
         # Import and start UFO
         print("🚀 Starting UFO framework...")
         try:
-            # Change to UFO directory and run
+            # Save current directory
+            original_dir = os.getcwd()
+            
+            # Change to UFO directory
             os.chdir(str(ufo_path))
             
-            # Import UFO main module
-            from ufo import main as ufo_main
+            # Run UFO as a module (this is the correct way)
+            import subprocess
             
-            # Start UFO with CadentialAI configuration
-            print("✅ UFO framework loaded successfully!")
+            print("✅ UFO framework loading...")
             print("🎯 CadentialAI is ready to assist you!")
             print("💡 Type your commands or say 'help' for available actions.")
+            print("📝 Starting UFO interface...")
             
-            # Run UFO
-            ufo_main()
-            
-        except ImportError as e:
-            print(f"❌ Failed to import UFO: {e}")
+            # Run UFO using python -m ufo
+            result = subprocess.run([sys.executable, "-m", "ufo"], cwd=str(ufo_path))
+            return result.returncode
+                
+        except Exception as e:
+            print(f"❌ Error starting UFO: {e}")
             print("Please ensure UFO dependencies are installed:")
             print("  pip install -r UFO/requirements.txt")
             return 1
-        except Exception as e:
-            print(f"❌ Error starting UFO: {e}")
-            return 1
+        finally:
+            # Restore original directory
+            try:
+                os.chdir(original_dir)
+            except:
+                pass
             
     except KeyboardInterrupt:
         print("\n👋 CadentialAI shutting down. Goodbye!")

@@ -122,6 +122,8 @@ API_VERSION: "2024-02-15-preview", # "2024-02-15-preview" by default
 API_MODEL: "gpt-4o",  # The only OpenAI model
 ```
 
+> 🔒 **Security Notice**: For secure API key management, see [SECURITY_SETUP.md](./SECURITY_SETUP.md) to learn how to use environment variables and `.env` files instead of putting keys directly in config files.
+
 #### Azure OpenAI (AOAI)
 ```yaml
 VISUAL_MODE: True, # Whether to use the visual mode

@@ -29,15 +29,47 @@ class Config:
             Config._instance = Config()
         return Config._instance
 
+    def _load_env_file(self, env_path: str) -> None:
+        """
+        Load environment variables from a .env file.
+
+        :param env_path: Path to the .env file
+        """
+        if os.path.exists(env_path):
+            with open(env_path, "r", encoding="utf-8") as file:
+                for line in file:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        key, value = line.split("=", 1)
+                        key = key.strip()
+                        value = value.strip()
+
+                        # Remove quotes if present
+                        if (value.startswith('"') and value.endswith('"')) or (
+                            value.startswith("'") and value.endswith("'")
+                        ):
+                            value = value[1:-1]
+
+                        # Only set if not already in environment (env vars take precedence)
+                        if key not in os.environ:
+                            os.environ[key] = value
+
     def load_config(self, config_path="ufo/config/") -> dict:
         """
         Load the configuration from a YAML file and environment variables.
+        Supports .env files for secure API key management.
 
         :param config_path: The path to the YAML config file. Defaults to "./config.yaml".
         :return: Merged configuration from environment variables and YAML file.
         """
         # Copy environment variables to avoid modifying them directly
         os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # Suppress TensorFlow warnings
+
+        # Load .env file if it exists (before loading other configs)
+        env_file = os.path.join(config_path, ".env")
+        if os.path.exists(env_file):
+            self._load_env_file(env_file)
+
         configs = dict(os.environ)
 
         path = config_path

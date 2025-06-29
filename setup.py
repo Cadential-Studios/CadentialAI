@@ -49,10 +49,9 @@ setup(
             "mkdocs-material>=9.5.3",
             "mkdocstrings>=0.24.0",
         ],
-    },
-    entry_points={
+    },    entry_points={
         "console_scripts": [
-            "cadentialai=cadentialai.main:main",
+            "cadentialai=cadential_ai:main",
         ],
     },
     include_package_data=True,
