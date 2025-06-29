@@ -3,7 +3,7 @@
   <b>CadentialAI</b> <img src="UFO/assets/ufo_blue.png" alt="CadentialAI logo" width="40"> :&nbsp;Personal&nbsp;Windows&nbsp;AI&nbsp;Assistant
 </h1>
 <p align="center">
-  <em>Your intelligent personal assistant for Windows, powered by UFO² framework for seamless desktop automation and productivity enhancement.</em>
+  <em>An intelligent personal assistant for Windows, powered by UFO² framework for seamless desktop automation and productivity enhancement.</em>
 </p>
 
 <div align="center">
@@ -24,6 +24,7 @@
 ## 🎯 Project Vision
 
 **CadentialAI** is a personal Windows AI assistant project, built on top of Microsoft's UFO² framework. It serves as an intelligent companion that understands natural language commands and automates complex desktop workflows across multiple applications. The goal is to create a truly personalized AI assistant that learns from usage patterns and becomes increasingly helpful over time.
+**CadentialAI** is a personal Windows AI assistant project, built on top of Microsoft's UFO² framework. It serves as an intelligent companion that understands natural language commands and automates complex desktop workflows across multiple applications. The goal is to create a truly personalized AI assistant that learns from usage patterns and becomes increasingly helpful over time.
 
 ---
 
@@ -32,11 +33,11 @@
 
 | **Smart Desktop Automation** | **Contextual Learning** | **Multi-Application Workflows** |
 |---------------------|-------------------------------------------|---------------------------|
-| Leverages UFO²'s advanced Windows integration for precise control detection and native API usage. | Learns from my personal usage patterns and preferences to provide increasingly personalized assistance. | Seamlessly coordinates actions across Office, browsers, development tools, and system utilities. |
+| Leverages UFO²'s advanced Windows integration for precise control detection and native API usage. | Learns from usage patterns and preferences to provide increasingly personalized assistance. | Seamlessly coordinates actions across Office, browsers, development tools, and system utilities. |
 
 | **Voice & Text Interface** | **Personal Knowledge Base** | **Productivity Optimization** |
 |--------------------------|--------------------------------|--------------------------------|
-| Accepts commands through both voice input and text, adapting to my preferred interaction style. | Builds a personalized knowledge base from my documents, emails, and work patterns. | Identifies repetitive tasks and suggests or automates workflow improvements. |
+| Accepts commands through both voice input and text, adapting to preferred interaction styles. | Builds a personalized knowledge base from documents, emails, and work patterns. | Identifies repetitive tasks and suggests or automates workflow improvements. |
 
 </div>
 
@@ -48,10 +49,10 @@ CadentialAI is built as a layer on top of UFO²'s **Desktop AgentOS**, incorpora
 
 1. **Personal Command Interface** – Natural language processing for voice and text commands with personalized vocabulary
 2. **UFO² Integration Layer** – Direct integration with UFO²'s HostAgent and AppAgent systems for desktop automation
-3. **Learning Engine** – Machine learning components that adapt to my personal workflows and preferences
+3. **Learning Engine** – Machine learning components that adapt to workflows and preferences
 4. **Knowledge Management** – Personal document indexing, email integration, and contextual information retrieval
-5. **Productivity Analytics** – Tracking and optimization of my daily computer usage patterns
-6. **Custom Skill Modules** – Specialized modules for my specific workflows (development, writing, research, etc.)
+5. **Productivity Analytics** – Tracking and optimization of daily computer usage patterns
+6. **Custom Skill Modules** – Specialized modules for specific workflows (development, writing, research, etc.)
 
 Built on UFO²'s proven foundation of Windows UIA, Win32, and WinCOM integration for reliable desktop control.
 
@@ -103,7 +104,7 @@ notepad UFO\config\config.yaml
 copy UFO\ufo\config\config.yaml.template UFO\ufo\config\config.yaml
 ```
 
-2. Add your OpenAI API key and configure personal settings:
+2. Add the OpenAI API key and configure personal settings:
 ```yaml
 HOST_AGENT:
   API_TYPE: "openai"
@@ -118,6 +119,10 @@ APP_AGENT:
 
 ### 🎉 Launch CadentialAI
 ```powershell
+# Start CadentialAI (it will automatically load UFO framework)
+python cadential_ai.py
+
+# Or run UFO directly
 # Start CadentialAI (it will automatically load UFO framework)
 python cadential_ai.py
 
@@ -160,7 +165,7 @@ python -m ufo --task "personal_assistant"
 
 ### Phase 2: Advanced Intelligence (Q3 2024)
 - [ ] **Proactive Assistance**
-  - Ambient computing awareness (detect what I'm working on)
+  - Ambient computing awareness (detect what is being worked on)
   - Background task optimization and scheduling
   - Smart notification management and filtering
   - Context-aware interruption handling
@@ -187,7 +192,7 @@ python -m ufo --task "personal_assistant"
   - Smart home integration (lighting, music, environment)
   - Automated backup and file organization
 - [ ] **Personal AI Evolution**
-  - Personality development that reflects my preferences
+  - Personality development that reflects preferences
   - Advanced reasoning about personal goals and priorities
   - Long-term pattern recognition and life optimization
   - Proactive goal tracking and achievement support
@@ -305,7 +310,7 @@ CadentialAI includes specialized modules for music production:
 
 ## 🤝 Contributing
 
-This is a personal project, but I welcome:
+Cadential Studios welcomes:
 - Feature suggestions and ideas for improvement
 - Bug reports and testing feedback
 - Documentation improvements and clarifications
@@ -330,7 +335,7 @@ Special thanks to the UFO² team for creating such a powerful foundation for Win
 
 For questions, suggestions, or collaboration:
 - **Project**: CadentialAI - Personal Windows AI Assistant
-- **Developer**: Scott
+- **Developer**: Cadential Studios
 - **GitHub Issues**: For bug reports and feature requests
 - **Built with**: Microsoft UFO² Framework
 

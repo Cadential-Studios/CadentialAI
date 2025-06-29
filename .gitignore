@@ -190,3 +190,17 @@ UFO/*.json.backup
 UFO/experience_data/
 UFO/config/config.yaml
 UFO/config/config_dev.yaml
+
+# Development notes and internal documentation
+docs/devnotes/
+
+# Environment files with sensitive data
+.env
+.env.local
+.env.*.local
+UFO/.env
+UFO/.env.local
+UFO/.env.*.local
+UFO/dataflow/.env
+UFO/dataflow/.env.local
+UFO/dataflow/.env.*.local

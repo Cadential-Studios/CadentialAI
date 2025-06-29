@@ -1,0 +1,16 @@
+# Ignore files
+cache/
+controls_cache/
+controller/utils/
+config/config.yaml
+tasks/
+logs/
+results/
+_logs
+_results/
+*.zip
+
+# Environment files with sensitive data
+.env
+.env.local
+.env.*.local
