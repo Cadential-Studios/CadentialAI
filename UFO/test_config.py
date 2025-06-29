@@ -193,8 +193,11 @@ def main():
     results = []
     for test in tests:
         try:
-            test()
-            results.append(True)
+            result = test()
+            if result is not None and isinstance(result, bool):
+                results.append(result)
+            else:
+                results.append(True)
         except Exception as e:
             print(f"❌ Test failed with error: {e}")
             results.append(False)
